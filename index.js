@@ -8,7 +8,7 @@ const customers = require('./routes/customers.js');
 //Middleware
 const cors = require('./middleware/cors');
 const auth = require('./middleware/auth');
-
+const notFound = require('./middleware/notFound');
 
 app.use(cors);
 app.use(morgan('dev'));
@@ -18,6 +18,7 @@ app.use(express.urlencoded({extended: true}));
 app.use("/user",usuarios);
 app.use(auth);
 app.use("/customers", customers );
+app.use(notFound);
 
 
 app.listen(process.env.PORT || 3100, () =>{ //es lo mismo que poner function()
