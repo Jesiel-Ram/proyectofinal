@@ -4,7 +4,12 @@
   "description": "An API Rest using express js",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesiel-Ram/proyectofinal"
   },
   "keywords": [
     "api",
@@ -14,7 +19,15 @@
   ],
   "author": "Jesiel, Fausto, someone",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesiel-Ram/proyectofinal/issues"
+  },
+  "homepage": "https://github.com/Jesiel-Ram/proyectofinal#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.16"
   }
 }
