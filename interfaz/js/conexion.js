@@ -84,7 +84,8 @@ function botones(id) {
                     "ajax": {
                         "url": "http://localhost:3100/customers/"+id,
                         "dataSrc": "data",
-                        "type": "DELETE"
+                        "type": "DELETE",
+                        "headers":{'Authorization': "bearer " + localStorage.getItem("token")}
                     },
                     "columns": [
                         {"data": "id" },
@@ -132,7 +133,8 @@ function busqueda(){
         "ajax": {
             "url": "http://localhost:3100/customers/"+nombre,
             "dataSrc": "data",
-            "type": "get"
+            "type": "get",
+            "headers":{'Authorization': "bearer " + localStorage.getItem("token")}
         },
         "columns": [
             {"data": "id" },

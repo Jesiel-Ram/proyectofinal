@@ -16,7 +16,8 @@ function agregar(){
             telefono: telefono,
             correoElectronico: correoElectronico,
             direccion: direccion
-        }
+        },
+        headers: {'Authorization': "bearer " + localStorage.getItem("token")}
     }).then(function(res){
         console.log(res);
         alert("Registro exitoso");
@@ -47,7 +48,8 @@ function actualizado(){
             telefono: telefono,
             correoElectronico: correoElectronico,
             direccion: direccion
-        }
+        },
+        headers: {'Authorization': "bearer " + localStorage.getItem("token")}
     }).then(function(res){
         console.log(res);
         alert("Actualización exitosa");
